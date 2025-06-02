@@ -31,4 +31,21 @@ To deploy and manage containerized applications using Kubernetes on a local Mini
 1. **Start Minikube**:
    ```bash
    minikube start
-2. Apply the deployment
+2. **Apply the deployment**:
+    ```bash
+    kubectl apply -f deployment.yaml
+3. **Apply the service**:
+    ```bash
+    kubectl apply -f service.yaml
+4. **Access the application**:
+    ```bash
+    minikube service nginx-service
+5. **View pods**:
+    ```bash
+    kubectl get pods
+6. **Scale deployements**:
+    ```bash
+    kubectl scale deployment nginx-deployment --replicas=3
+7. **View logs**:
+    ```bash
+    kubectl describe pod <pod-name>
